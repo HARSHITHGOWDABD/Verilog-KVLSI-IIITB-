@@ -1,1 +1,1 @@
-vd# Verilog-KVLSI-IIITB-
+# Verilog-KVLSI-IIITB-
