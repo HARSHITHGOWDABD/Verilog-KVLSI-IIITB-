@@ -1,4 +1,4 @@
-#Fulladder in dataflow
+# Fulladder in dataflow
 ```
  module fulladder(s, cout, a, b, cin);  
   input a, b, cin; 
