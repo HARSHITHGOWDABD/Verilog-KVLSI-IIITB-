@@ -1,4 +1,4 @@
-#verilog code 
+# verilog code 
 ```
 module counter_fsm_0237(clk, rst, count);
   input clk, rst;
