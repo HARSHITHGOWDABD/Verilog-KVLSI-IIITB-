@@ -1,51 +1,24 @@
-# verilog code 
+# code 
 ```
-module counter_fsm_0237(clk, rst, count);
-  input clk, rst;
-  output reg [2:0] count;
-  reg [2:0] ps,ns;
-  
-  
-  parameter s0 = 2'b00;
-  parameter s1 = 2'b01;
-  parameter s2 = 2'b10;
-  parameter s3 = 2'b11;
-  
-  always @(posedge clk) begin
-    if(rst)
-      ps <= s0;
-    else
-      ps <= ns;
-  end
-  
-  always @(ps) begin
-    case(ps)
-      s0 : begin
-        count = 3'd0;
-        ns = s1;
-      end
-      
-      s1 : begin
-        count = 3'd2;
-        ns = s2;
-      end
-      
-      s2 : begin
-        count = 3'd3;
-        ns = s3;
-      end
-      
-      s3 : begin
-        count = 3'd7;
-        ns = s0;
-      end
-      
-      default : begin
-        count = 3'd0;
-        ns = s0;
-      end
-    endcase
-    
-  end
-endmodule
-```
+// Code your testbench here
+// HARSHITH GOWDA B D 
+module datatype_in_verilog;
+  wire     a;
+  reg      b;
+  integer  c;
+  real     d;
+  time     e;
+  realtime f;
+  reg   [4]g;
+  wire  [4]h;
+     initial begin
+          $display("The default value of wire is   = %0d,default size of wire is = %0d",a,$bits(a));
+           $display("The default value of reg is   = %0d,default size of reg is  = %0d",b,$bits(b));
+          $display("The default value of integer is   = %0d,default size of integer is = %0d",c,$bits(c));
+          $display("The default value of real is   = %0f",d);
+          $display("The default value of time is    = %0d,The defalut size of time is = %0d",e,$bits(e));
+          $display("The default value of realtime is = %0f",f);
+          $display("The default value of wire is = %0d,default size of wire is = %0d",g,$bits(g));
+         $display("The default value of reg is = %0d,default size of reg is = %0d",h,$bits(h));
+     end
+endmodule  
