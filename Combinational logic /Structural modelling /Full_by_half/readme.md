@@ -38,6 +38,11 @@ module full_adder (
 
 endmodule
 ```
+# NOTE
+```
+1. Here we are full_adder will be the top module and half adder will be the lower module.
+2. In port maping lower module will be written first and then the top module.
+```
 # OUTPUT
 ```
 A B Cin | Sum Carry
