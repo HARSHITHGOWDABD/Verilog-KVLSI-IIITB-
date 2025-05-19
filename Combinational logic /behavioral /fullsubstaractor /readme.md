@@ -34,6 +34,8 @@ module full_substractor;
 ```
 # OUTPUT 
 ```
-![Screenshot (494)](https://github.com/user-attachments/assets/60584a93-968c-4a7a-a6b8-cc6ad4273bd1)
+ ![Screenshot (494)](https://github.com/user-attachments/assets/19b48856-73d2-4ef1-88f9-5a6fa7d7e29c)
+
+
 ```
 
