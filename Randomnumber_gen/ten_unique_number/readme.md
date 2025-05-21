@@ -40,6 +40,7 @@ module random_unique_tb;
 endmodule
 ```
 # OUTPUT 
-![Uploading Screenshot (496).png…]()
+![Screenshot (496)](https://github.com/user-attachments/assets/99292296-138c-4491-8b24-fafc8d53c0a8)
+
 
 
