@@ -40,5 +40,6 @@ module random_unique_tb;
 endmodule
 ```
 # OUTPUT 
-![Uploading image.png…]()
+![Uploading Screenshot (496).png…]()
+
 
