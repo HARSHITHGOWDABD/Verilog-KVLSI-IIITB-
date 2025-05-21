@@ -39,7 +39,7 @@ endmodule
 ```
 # NOTE 
 ```
-1. To fix the range a=random%N is used it will print the values from -(N-1) to (N-1).
+1. To fix the range a=random%N is used .It will print the values from -(N-1) to (N-1).
 ```
 # OUTPUT 
 
