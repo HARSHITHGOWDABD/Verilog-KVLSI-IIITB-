@@ -5,7 +5,7 @@
 <<< -->  ARITHEMETIC LEFT SHIFT 
 >>> -->  ARITHMETIC RIGHT SHIFT
 ```
-NOTE 
+# NOTE 
 ```
 1.Shift operation is a binary operation .
 2.In logic shift the vacent position is filled with zero .
