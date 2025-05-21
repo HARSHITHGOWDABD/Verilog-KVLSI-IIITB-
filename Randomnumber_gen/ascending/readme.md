@@ -1,4 +1,4 @@
-# Write a verilog code to generate the ramdom nmnber and sort them in ascending order
+# Write a verilog code to generate the ramdom number and sort them in ascending order
 ```
 // Code your testbench here
 // or browse Examples
