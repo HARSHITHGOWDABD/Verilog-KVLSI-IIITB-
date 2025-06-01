@@ -52,4 +52,27 @@ VHDL vs VERILOG
 
 ARRAYS 
 40. Used to store same type of data 
-41.
+41. In vectors the data will be stored in the form of row 
+42. In arrays size is defined after the array name 
+43. In array each row of size 32 bit and it can be of reg ,integer, string (arrays forms column )
+-----> vector should always be of reg type
+int a[10] --> compact declaration 
+int a[1:0] --->verbose declaration 
+45. array accesing declaration is same as array devalration with compact
+
+STRINGS
+46.There is no ready made string datatype in verilog 
+47.String is a arrray of character and each charactes need 8 bit to represent it 
+48.We need to use the reg datatype to for the string 
+49.In verilog we need to declare the memory first 
+50.Syntax is similar to the vector 
+51.If we decalare the size is more than the required then the blank space will be created at msb side 
+52.If the size is less than the required then lsb bits are given higher preiority msb bits are truncated 
+
+FUNDAMENTAL BLOCK OF VERILOG 
+53.Module is a basic building block of verilog 
+54.By default the datatype of the input is wire always 
+55.For output it can be reg or wire 
+56.while writing the port if they are of same size no need to declare seperately 
+57.vector representation for mux and other type of representation
+
