@@ -16,3 +16,40 @@ VHDL vs VERILOG
 15.gate , structural , dataflow (rtl), behavioral , switch level of modelling
 16.comments (//) for multiple (/*),
 17.Rules of Identifier ,all keywords are in lower case,
+18.negative number is represented by 2's compliment form only
+19.default number is decimal and size is 32 bit .
+20.variable name =size'base value 
+21.blank space is filled by only 0,x,z.
+22.0x is an hexadecimal format .
+23.all the datatype in verilog has 4 states except real.
+24. ? is an alternative symbol for z in verilog,but in some of the condition it is dontcare .
+25.x and z are case insencitive 
+26. net type is used to connect multiple data default size is 1 and value is z.
+27. In net type signal must be driven continiously , suitable for combinational circuit 
+28. In vetror representation the size must be mentiond before variable name 
+ 
+ ---->DIFFRENCE BETWEEN THE WIRE AND REG 
+ 1.Default value is z and reg is X
+ 2.wire needs continious driving
+ 3.reg is used to hold the value wire will simply supply
+ 4.reg will be written inside the procedural blocks 
+ 5.wire and reg by default they are unsigned .(integer is signed )
+ 6.If we want to make it signed then signed keyword can be used befor the size 
+
+
+---> ALWAYS AND INITIAL ARE THE PROCEDURAL BLOCKS 
+
+30. Order must be same always from higher to lower or lower to higher in vector
+31. integer is also a type of reg datatype
+32. it is 32 bit and signed and default value is x . Equal to reg signed [31:0]a;
+33. ---> WE cannot mention the size to an integer.Because by default the size is fixed
+34. ---->all inputs are wire and output are of reg in dut
+35. Real is a type of register data type used to store real values
+36. ---> default value is 0 and
+37. time and realtime are 64 bit datatype used to show the simulation results.
+38. time will give the time in integer where as realtime will provide the fraction values also
+39. $time is a system function used to show current simulation time.
+
+ARRAYS 
+40. Used to store same type of data 
+41.
