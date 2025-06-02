@@ -113,7 +113,29 @@ Structural modelling
  d)stimuly generation 
  e)Capture the monitor input and output within procedural block
  f)For waveform with in the initial block $dumpfile ("dump.vcd") and $dumpvars("0,a,b,c) zero is the level of hirachy 
- 
+
+1) 2:1 mux using  structural modelling
+2) 2:4 decoder
+3) 4:2 encoder
+4) 3 bit parity generator
+
+Dataflow modelling 
+1.Impliment by using some operators
+2.Assign key word will be used 
+----in dataflow the target must be of wire (net)type 
+ 3.How asign works initially evaluation of rhs will be done and then updation to lhs will be done 
+4.RHS could be of net or reg or function 
+5.if single wire is assigned with two diffrent operation is called multidriver condition
+6.It is only when the target is of wire type (it will produce x)
+7.If there is delay there is no problem
+
+codes 
+a)3 bit binary to gray code converter 
+b)prime number detectator 
+c)3 bit pallendrode detector 
+d)BCD to excess 3 code converter 
+
+OPERATERS 
 
 
 
