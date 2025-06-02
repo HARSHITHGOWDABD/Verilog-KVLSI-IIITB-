@@ -34,7 +34,8 @@ VHDL vs VERILOG
  3.reg is used to hold the value wire will simply supply
  4.reg will be written inside the procedural blocks 
  5.wire and reg by default they are unsigned .(integer is signed )
- 6.If we want to make it signed then signed keyword can be used befor the size 
+ 6.If we want to make it signed then signed keyword can be used befor the size  of 32 bit 
+ 7.multidriver condition is supported by wire 
 
 
 ---> ALWAYS AND INITIAL ARE THE PROCEDURAL BLOCKS 
@@ -58,7 +59,7 @@ ARRAYS
 -----> vector should always be of reg type
 int a[10] --> compact declaration 
 int a[1:0] --->verbose declaration 
-45. array accesing declaration is same as array devalration with compact
+45. array accesing declaration is same as array declaration with compact
 
 STRINGS
 46.There is no ready made string datatype in verilog 
@@ -75,4 +76,44 @@ FUNDAMENTAL BLOCK OF VERILOG
 55.For output it can be reg or wire 
 56.while writing the port if they are of same size no need to declare seperately 
 57.vector representation for mux and other type of representation
+
+58.Input always be a wire type , output is reg or wire
+
+Parameter 
+1.It is used to define the parameter in the code 
+2.Syntax Parameter variable_name = value
+3.Parameter can be chaned by using the defparam used in testbench (it will overite the value )
+4.It can be binary , real, integer or string 
+
+Level of abstraction in verilog 
+1. Structural (by using gates ) we will use the primitives here
+2. dataflow (assign )
+3. structural (instatiation )
+4. behavioral (higher level of constracts )
+
+Structural modelling 
+1. Majorly there are three types of primitives in a)logic b)inverter/buff c)tristate inv/buff
+2. Logic primitive and ,or ,xor,xnor,nand , nor (they have only one input and multiple output
+3. syntax will be logic(output , in1,in2,in3)
+4. In  inveter/ buffer --1)Buf and 2) not here [it as one input and multiple output]
+5. the syntax is inv(op1,op2,op3,in)
+6. Tristate inveter,buffer --bufif0  -- active high control buffer 
+7. .                      --bufif1  -- active low control buffer 
+8. .                      --notif0  -- active low control inverter 
+9. .                      --notif1  -- active high control inverter
+10.  syntax is primitive name instance name (outputs, inputs, control)
+
+----In gate level and dataflow  , structural the output is of the wire type only
+----In Behaviorl output is of the reg type 
+59.# is used to provide the delay 
+30.Steps in the test bench 
+ a)write a module without port 
+ b)input as reg and output as wire 
+ c)Dut instantiation (Port mapping may be position or named )
+ d)stimuly generation 
+ e)Capture the monitor input and output within procedural block
+ f)For waveform with in the initial block $dumpfile ("dump.vcd") and $dumpvars("0,a,b,c) zero is the level of hirachy 
+ 
+
+
 
