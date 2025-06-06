@@ -336,6 +336,58 @@ DELAYS IN VERILOG
 7.In intra statement will be evaluated first and then then delay will be exeguted 
 8.Intra and non blocking behaves as an actual hardware 
 9.HINT ----while calculating the delay use the memory 
+
+ORDER OF EXEGUTION IN VERILOG 
+1.Preponed region- initilization 
+2.Active region -- conditional statemts , blocking statement exegution , $display and $write , rhs updation of non blocking assignment 
+3.Inactive region -- #0 delay will be exeguted 
+4.NBA region --- updation of non blocking 
+5.Postponed region --$strobe and $monitor 
+
+SYSTEM TASK IN VERILOG 
+1.It will starts with $ symbol
+2.By this we can 
+     a)Display and monitor the inputs and outputs 
+     b)Control of simulation
+     c)Timing checks 
+3.All system tasks are non synthesizable 
+4.System task must be used inside the procedural block 
+
+THERE ARE FOUR DISPLAY TASK 
+a) $display  exegution in -----> active region  ---- has new line char --- prints only one time 
+b) $write                 -----> active region  ---- no new line char  --- prints only one time 
+c) $monitor               -----> postponed region  ---has new line char -- prints whenever the changes occer 
+d) $strobe                -----> postponed region ----has new line char -- prints only once 
+
+5.We can write the multiple monitor inside the code but only the last moniter will going to active
+6.We can  control the monitor by $monitor on and $ monitor off
+7.If two statements are in the active region then preority will be give to which one is first 
+
+SIMULATION CONTROL TASK 
+Majory 3 are there 
+  1)Terminate / end -------->$finish
+  2)Suspend (pause ) ------->$stop
+  3)resheddule / reset ------>$reset
+
+1. $finish(0) ----> do not return anything , just terminate the exegution
+2. $finish(1) ----> prints at what time the suspention encounter 
+3. $finish(2) ----> gives complete information , about the memory and at this simulation time it has suspend etc
+
+CONTINIOUS ASSIGNMENT 
+1. continoius assignment should be written outside the procedural block
+2. Active all the time
+3. Suppors multidriving condition
+4. Multi driving condition is alloed in the wire only (at same time you are driving the value )
+5. It will print x ( if y=0 and y=1)
+
+Procidural assignments 
+1. It is  called procedural assignemt because we are writing inside the procedural blocks
+2. a)Blocking b) Non blocking
+3. 
+  
+
+
+  
   
 
    
