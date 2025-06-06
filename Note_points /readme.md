@@ -134,8 +134,87 @@ a)3 bit binary to gray code converter
 b)prime number detectator 
 c)3 bit pallendrode detector 
 d)BCD to excess 3 code converter 
+----> in behavioral asignment the target must (LHS) be of the reg type only 
 
 OPERATERS 
+1.Arithmetic operator is a binary operator 
+2.If any of the opearatiod is real or x or z it will be x and real
+3.In tb there are many 
+4.Logic operator
+5.Shift operator( op1 should to unsigned in logical shift ans signed in arithmetic shift )
+6.Concatination opeartion
+7. In arithmetic opearation a/b if b is zero the result will be x
+8.Ternary operator is called ternary because it has three operands condition , true , false 
+9.Reduction operator writtens only one value 
+10.Logical equal and case equal is very important == and ===
+11.Equality operator equality , inequality ,case equality ,case inequality (case refers to 3 symbols)
+12.Bitwise operand returns the size of largest operand
+13.diffrence between the & and && &(bit wise means bitwise operation returs the largest bit of the operands ) &&(logical operands first decides if it is zero or non zero then it will give only one bit output ) Reduction operand also written only one bit .
+
+STRUCTURAL MODELLING STYLE 
+How to delcare the parameter module #(parameter =4) (a,b,sum,cout)
+
+46. Initial block is non synthesizable always used in testbench , always block is synthesizable and execute in the looping fashion
+47. The code inside the always and sequential in nature
+48. Sencitivity list is the list of variables means inputs and @ (holds the simulation till the changes occurs inside the sencitivity
+      list )
+    BEHAVIORAL MODELLING 
+49.Behavioral can be used  for cobinational and sequential circuit
+50.In combinatioal circuit include all the inputs in the sencitivity list and use the blocking statements
+51.Inputs must be of wire and output must be reg
+52.= blocking statement <= non blocking statement
+53.more number of memory will be created in the non blocking , because the sequential circuits needs to be shedule for a while and then ex
+54.Behavioral modelling is majorly used in the sequential circuit
+55.Lathes are more or less it is a sequential circuit
+56. In flip flop we are only bother about the edges
+57. If i am making syncronous flip flop use the posedge only in sencitivity list
+58. If it is asynconous use resset also in the sencitivity list
+59. Output cannont be given as a input becouse they are uni directional
+60. So under this condition take that as a reg variable and later assign it
+61. In test becnh there are 5 major task
+62. a) declaring all i/o b)connecting dut with test bench c)Generate a stimuly d)drive the stimuli e) capture the responce
+63. Simulation refers just verifiying our design
+64. Compilation ----> Checks the synthatical errors
+65. Simulation  ----> Checks logical equilance
+66. Synthesis   ----> Convering to netlist
+67. What ever the statements starts with the $ symbol it is called system task
+68. In behavioral modelling we are using higher level constructs like while , for , function , task
+69. As the code inside the procedural blocks will execute in the sequential manner
+70. We can have multiple procedural blocks in the code and every one starts from 0 simulation time
+71. Target must be reg type in behavioral
+72. nesting of procedural blocks are not allowed
+73. Procedural blocks are exegute continiouslay untill we block the exegution (# , @, wait )
+74. # provides the delay , @ holds untill the change in the sencitivity list , wait waits for the signal
+75. Assignment statement inside the procedural block in BLOCKING = , and NON BLOCKING <=.
+76. Till now we have 3 assignment a) continious assignmnt for dataflow b)blocking for combinational c)non blocking for sequential
+77. Initial block only used in testbench bcz to initilize the values (it is non synthesizable)
+78. Initial block exegutes in zero simuation time
+79. In pracitcall simulator does not work concurrentely it works sequntially
+80. Initial block rums only one time
+81. --> in program we have both the initial and always block then initial runs first then always
+82. When ever we want to combine multiple statement we use begin and end
+83. Combinatiol leades to blocking and non blocking for sequential
+84. Begin end means the sequential exegution
+85. Modelling of flip flop should be by using higher lelvel constructs (if else and case ..)
+
+86. ALWAYS BLOCK
+87. It can be use for both dut and test bench
+88. Always block executes at multiple times that depends on the sencitivity list
+89. When we dont write the sencitivity list the always block will exwcute for infinate time
+90. In the same code we have both always and initial in this case initial will execute first
+
+DIFFRECNE BETWEEN THE INITIAL AND ALWAYS BLOCK 
+1. initial non synthesizable , always may be synthezible(provoided codeing guidelines are followed)
+2. initial runs one time , always runs frequently depending upon the sensitivity list 
+3. Multiple times we can use and always execute in 0 simulation time
+4. Mostly used in testbench (initial) always used in the dut
+5. 
+
+    
+
+    
+
+   
 
 
 
