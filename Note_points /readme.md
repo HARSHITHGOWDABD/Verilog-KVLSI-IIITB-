@@ -389,7 +389,70 @@ Procidural assignments
   modelllig
 5.Some times it has race condition    |Removes the race condition
 6.Solve the problems on regions
-7.
+
+
+ EXAMPLE FOR BLOCKING RACE CONDITION 
+1. a=1
+   b=0
+
+   initial brgin a=b
+   initial begin b=a
+     creat a memory and then conside the forst initial block exegute first , and then second initial block
+     under this condition the output changes
+
+   HINT :  USE DELAY or NON BLOCKING STATEMENTS
+
+   CONDITIONAL STATEMTS
+   1. Conditional statemts are the statemts ocurs when they exegutes whenever the condition is true or false
+   2. IF ELSE are used for conditional statemnts
+   3. Conditionl blocks are allowed inside the proedural blocks only
+   4. if(condition) more condition begin end is required
+   5. -----if(x,z) ----> treated as the false condition .
+   6. if
+   7. -----
+   8. -----
+   9. else
+   10.   if
+   11.   IMPORANT FOR UNDERSTANDING  we can write the mnultiple if , if  condition then it will check all the if conditions
+   12.   But if we mention any else condition if , if condition is true it will not check the else condition
+
+
+  DIFFRENCE BETWEEN THE TERNARY OPRATATOR AND IF ELSE 
+  1. If the values are 0 and 1 no change
+  2. But diffrence comes when ther is X comes
+  3. in if else the else part will exegute  when it is x
+  4. But in ternary each bit will be compared and if they are same it will give 1 if it is diffrent it will give x
+
+MULTYWAY BRANCHING 
+1. When ever we want to check the multiple condition case statemnet will be useful and check will be done in the order what they have        written
+2. Default statemts will be always exegute at the last
+3. ---->In the case statement whenever we are not writing all the conditions and the default statemts under this condition it will call the previous value or latched value (It will give previous latched value)
+4. nesting of case statement is allowed
+5.Begin end is required when multiple statements
+
+DIFFRENCE BETWEEN THE IF ELSE AND THE CASE STATEMTS 
+1.In if-else it gets x means the else part will going to exegute 
+2.But in case the x and z valus are also checked (it is allowed) .It will give definate results under this condition also 
+3.The length of the code is small is case and it is easy to understand 
+4.It will accepts all the inputs  like 0,1,x,z
+
+DIFFRECE BETWEEN THE CASE , CASEX , CASEZ 
+ 1. In case all the  0,1,x,z are the valid inputs , the expression and alternative are compared bit wise include x and z
+ 2. In case z 0,1,x are called as the valid input and z and ? considered as the dont care
+ 3. In case x  0,1 are called as the valid inputs x,z,? will be considered as dontcare
+
+LOOPING STATEMNT 
+1.Whenever we have pice of code that should be exeguted multiple time then we can use this looping statement 
+2.for and repeat are the only two synthesizable loops in verilog 
+3.For designing of the hadware we need to have fixed number of iteration  that will be avilable in the for and repeat loop only 
+4.But in the while and the forever the number of iteration is not fixed or not known so it is not synthesizable 
+5.We can combine the multiple statement by using the begin and end statement 
+6.It should we used inside the procedural blocks 
+7.for(init:con:updation)
+ 5. 
+
+
+        
                                   
   
 
