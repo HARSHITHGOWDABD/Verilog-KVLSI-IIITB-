@@ -38,7 +38,7 @@ VHDL vs VERILOG
  7.multidriver condition is supported by wire 
 
 
----> ALWAYS AND INITIAL ARE THE PROCEDURAL BLOCKS 
+---> ALWAYS AND INITIAL ARE THE PROCEDURAL BLOCKS  , FUNCTION AND  TASK ALSO 
 
 30. Order must be same always from higher to lower or lower to higher in vector
 31. integer is also a type of reg datatype
@@ -449,7 +449,61 @@ LOOPING STATEMNT
 5.We can combine the multiple statement by using the begin and end statement 
 6.It should we used inside the procedural blocks 
 7.for(init:con:updation)
- 5. 
+
+WHILE LOOP 
+1.It is used to exegute the code for indeterminant amout of time we dont know when it will end
+2.Not syntheziable 
+3.-----NOTE 📝 If there is no begin and end only one statement will be exeguted and that to the last statement 
+
+
+DIFFRENT WAYS TO GENERATE A CLOCK 
+1.always 
+2.while(1)
+3.forever 
+
+8.repeat(count)
+9.fovever exegute for infinate loop without condition , it is similar to while (1)
+10.$finish helps to terminate the code 
+11.forever can be stop by disable statement 
+
+
+HOW A ALWAYS  BLOCK WILL BE CONVERTED INTO INITIAL AND INITIAL TO ALWAYS BLOCK 
+                                        |
+initial                                 |     always @(posedge)
+  forver                                |     a=a+1;
+    begin                               |
+       @(posedge)                       |                    
+         a=a+1;                         |
+     end                                |
+
+
+# HOW TO USE THE FOR LOOP INTO WHILE 
+                                        |
+for(i=0;i<10<i++)                       |   i=0
+  begin                                 |    while(i<10)
+     display( "a=%d",i);                |      begin  
+   end                                  |         i=i+1;
+                                               end 
+
+
+NOTE :reset always helps in the  proper functioning of the hardware
+
+# GENERATE STATEMENT 
+
+1.Generate statement is used to replicate the hardware by calling the modules 
+2.By uing the for,while i cant call the modules but by using this we can call the module
+3.It works in the looping manner only 
+4.It is used  in the DUT writing 
+5.Starting with the keyword generate and ending with the endgenerate 
+7.Generate instance can be combination of any of these 
+    a)module instance      b)User define primitives 
+    c)Gate primitives       c)Continious assignment 
+8.It permits usage of nets ,register and events in the generate scope 
+9.Declaration of parameter , local parameter ,input , output inout ports and specify blocks are not allowed 
+10.Specify block is used for pin to pin delay 
+11.There are three tyo
+
+    
 
 
         
