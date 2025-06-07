@@ -382,8 +382,15 @@ CONTINIOUS ASSIGNMENT
 
 Procidural assignments 
 1. It is  called procedural assignemt because we are writing inside the procedural blocks
-2. a)Blocking b) Non blocking
-3. 
+2. a)Blocking                                      b) Non blocking
+3.Exegutes in active region           | RHS eveluation in active region and updation in the NBA region 
+   and blocks further statements      | and allows the further statements to exegute 
+4.Used for combnational circuit       | It is for sequential circuit modelling 
+  modelllig
+5.Some times it has race condition    |Removes the race condition
+6.Solve the problems on regions
+7.
+                                  
   
 
 
