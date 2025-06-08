@@ -1,4 +1,4 @@
-VHDL vs VERILOG 
+# VHDL vs VERILOG 
 1.VHDL is a typed language and it is very difficult to understand
 2.verilog is similar to c programing, c is a procedural/sequential  and verilog is concurrent programming language.
 3.Test bench is used to generate the stimuli 
@@ -501,7 +501,73 @@ NOTE :reset always helps in the  proper functioning of the hardware
 8.It permits usage of nets ,register and events in the generate scope 
 9.Declaration of parameter , local parameter ,input , output inout ports and specify blocks are not allowed 
 10.Specify block is used for pin to pin delay 
-11.There are three tyo
+
+USER DEFINED PRIMITIVES 
+IT is a new primitives with is similar to what we have.
+1.Primitives gives the faster results , speed up simulation
+2.These are not synthesizable 
+3.Diffrence between the module and udps 
+4.Module take time to exegute but udp is very much faster 
+5.But it not synthesizable and it has only one output many input 
+6.It can be instanicate like a built in primitives 
+7.Primitive ----- endprimitive this is a keyword 
+8.Truth table must be specified in the udp with the (tabel ---- endtable )
+9.Evaluation of UPD by ------XL ALGORITHM 
+10.Memory will be reduced 
+11.It is written outside the module (independent)
+12.UDP does not contain any module 
+
+PROPERTIES OF UDPS 
+1.One of the advance concept in verilog 
+2.Non synthesizable
+3.single output many input 
+4.syntax iniclude must have first output and then inputs 
+5.Consume less power 
+6.I/o must be  of scalar type 
+7.Z is not supported by UDPs
+
+UDPS ARE CLASSIFIED INTO TWO TYPES 
+  a)Combinatioanl udps
+  b)Sequential udps 
+
+Combinational UPPS 
+1.First ouput and then inputs 
+2.If one of the input is missing it will give x
+  STATE TABEL SPECIFICATION 
+input1   input2 input3  : output;
+3.: is used to seperate the inputs and outputs and ; for termination
+4.? consider as dontcare 
+ptimitive and_gate(c,a,b)
+input a,b;
+output c;
+
+table 
+0 0 : 0;
+0 1 : 0;
+1 0 : 0;
+1 1 : 1;
+0 x : x;
+1 X : x;
+endtable 
+
+endprimitive 
+
+SEQUENTIAL UDPS 
+1.The output has to be first port and that should to be decalare as reg 
+2.Initial statemts can be used to initilize thr output in seqential UDPS 
+3.Input spectication cam be interms of input level or edge transition 
+4.All possible combination of input must be specified to avoid unknown output value
+
+SYNTAX 
+    input_values : previous_outputs : output_value1 output_value2
+    t rst clk : q : q+ ;
+    for transition of edges 
+      (01)---> o to 1 transition 
+      
+    
+    
+    
+
 
     
 
