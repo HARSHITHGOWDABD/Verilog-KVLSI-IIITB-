@@ -671,6 +671,25 @@ DISABLING THE BLOCK
    5+{0---10}
    5+{$random}%11;
 
+### COMPILIER DIRECTIVE 
+1.They helps in conditional exegution  and conditionl compilation
+2. Verilog supports some special keywords for compilation it is called complier directive
+2. Directive can be declared by ' and directive name
+3. we can write anyware, but some of them we need to  write outside the module (`include ,`define ,`timescale)
+4. `include refers to just copy pasting the code 
+5.`define is used to defining the constants  or variables
+7.refers pppt 
+
+`timescale 
+1.Provide us a time unit and precision 
+2.#5 = 5*time unit (1ns)
+3.time unit is always in the power of 10 -->10,100,1000
+4.Always time unit is greater than the precision unit 
+5. `timescale 10ns/1ns (allowed)
+6.  `timescale  1ns/10ns (notallowed)
+7.multiplication will be done only with time unit and precission unit just matching
+8.Precision will helps in convrting the fraction value into integer value
+9.refer ppt 
 
 
 
