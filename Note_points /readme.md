@@ -616,7 +616,65 @@ THERE ARE 2 WAYS TO ASSIGN THE DELAY IN THE PIN TO PIN DELAY
 
   -->specparam is used in pin to pin delay 
   -->this will be local to specify block only 
-      
+
+##### Procedural block nesting is not allowed (we cant write the always block inside the initial block )
+##### I cant write the module inside the always block (generate block came into picture )
+
+DISABLING THE BLOCK 
+
+--> By providing the label to that block 
+        begin : name 
+
+        disable name ]
+ TIMING CHECK TASK 
+ 1.Veriog has some timing construct to perform common timing checks
+ 2.help in setup and hold voilation identification 
+ 3.system timing checks only be used in specify block 
+ 4.all timing checks begins with the $
+ 5.No system task allowed inside the specify block 
+   USAGE  a)records the occurance of data or reference events 
+          b)waits for occurance of second data or reference time 
+          c)reports the voilation if any 
+
+  1)$setup ----->check setup time voilation --->check syntax in ppt 
+  2)$hold  -----> check the hold voilation 
+  3)$setuphold
+  4)$recovery ---->clear ,rest ,set 
+  5)$removal 
+  6)$recrem
+  8)$width 
+  9)$period 
+  10)$nochange 
+  11)$skew 
+  12)$timeskew
+  13)$fullskew
+
+  
+# RANDOM NUMBER GENERATOR 
+1.a=0 ; b=1 ; c=0          --->        directed verification 
+2.{a,b,c}=$random          --->        random 
+3.{a,b,c}={$random} %4     --->        constrained random 
+
+4.$random is a system task it is by default 32 bit signed 
+5.To limit this random number $random %constant will be used 
+6.It is used to find the hidden bugs 
+7.syntax $random[(seed_value )]
+8.seed value will helps in the generation of fixed random values 
+9.By default the seed values are fix 
+10.$random can generate both signed and unsigned values 
+11.If we mention $unsigned($random) it will generate only positive values 
+12.$random %50 ----> it will generate from -49 to 50.
+13.$unsigned($random)%100----->0 to 99.
+14{} will also work as a unsigned 
+15.{$random}%35 -----> 0 to 34 
+16.To generate the value from 5 to 15 
+   5+{0---10}
+   5+{$random}%11;
+
+
+
+
+
     
     
     
@@ -636,10 +694,10 @@ THERE ARE 2 WAYS TO ASSIGN THE DELAY IN THE PIN TO PIN DELAY
    
    
    
-   
-   
+ 
+  
 
-    
+   
 
     
 
