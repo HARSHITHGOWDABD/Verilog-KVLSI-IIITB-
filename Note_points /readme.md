@@ -254,7 +254,7 @@ DIFFRECNE BETWEEN THE INITIAL AND ALWAYS BLOCK
    10. Function can be called inside the function
    11.----> We cannot call task inside the function
    12. Function can invokes other function but task cant
-   13. Return type of all inputs are i bit by default
+   13. Return type of all inputs are 1 bit by default
    14. -----> Only blocking sequential statemnts are allowed in function bcz the function always exegute in the avtive region .
    15. We cannot use the non blocking statements in the function
    16. Function and task have an access to the outside the scope (should be written inside the module )
@@ -563,6 +563,59 @@ SYNTAX
     t rst clk : q : q+ ;
     for transition of edges 
       (01)---> o to 1 transition 
+
+NOTE : Assign and deassign is only applicable for reg , but fource release can be used for wire , reg and all 
+
+# MODELLING DELAYS 
+1.Functional verification tells wether my output is correct or not , but in  the circuit there will be delays 
+2.So for proper working there will be timing constructs are must 
+
+TYPES OF DELAY MODELLING 
+  a)Distributive delay 
+  b)Lumped delay 
+  c)Pin to Pin delay 
+  -----> All this modelling of the delay in the gatelevel modelling 
+
+  1.Distributive delay              : the delay mentioned for individual logic elements is called distributive delay (and has 5ns)
+  2.Lumped delay                    : specified for complete module basis 
+  3.Pin to pin(Path delay )         : it is the delay associated with the path from one to another (from one input to output )
+
+  DIFFRENCE BETWEEN THE LUMPED AND DISTRIBUTIVE DELAY 
+
+  1. Difficult to impliment       |  1. Easy to impliment
+  2. Delays are accurate          |  2. Less accurate
+  3. All path must dont have same |  3. All path must have same amount of delay 
+     amout of delay
+     
+Note1 :pin to pin delay can be modelled in behavioral , dataflow , and gate level 
+Note2 :Path dealy will be specified by specify block 
+
+------- IMPLICITELY --->Something happens automatically or by default, without you writing it clearly.
+------- EXPLICITELY ---->You clearly write or say what you want.
+
+THERE ARE 2 WAYS TO ASSIGN THE DELAY IN THE PIN TO PIN DELAY 
+    a) Parallel connection ---> one to one mapping -->and should be written inside the specify block --(specify and endspecify )
+    b) Full connection 
+
+   Parallel connection 
+     syntax : ( source pin => destination pin)= delay value 
+     -> Both the input and output are of the same size, then only this will come 
+
+   FULL CONNECTION 
+
+  1.  syntax  :  (source pin *>destination pin )=delay_value 
+  2.   each bit of source is connected to every bit of the destination 
+  3.    Source and destination are not of same type
+  4.   They can be vector or it can be a scalar
+
+----->specparam is a keyword used to declare special parameter inside the specify block 
+     a)parameter --->delare at the time of module declaration and can be used outside the module also 
+     b)defparam  ---->used to change the value of the parameter 
+     c)specparam ---->special parameter delare inside the specify block 
+     d)localparam -->cant be used outside the module 
+
+  -->specparam is used in pin to pin delay 
+  -->this will be local to specify block only 
       
     
     
