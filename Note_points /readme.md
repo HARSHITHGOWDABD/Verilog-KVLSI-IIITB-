@@ -1,5 +1,5 @@
 # VHDL vs VERILOG 
-1.VHDL is a typed language and it is very difficult to understand
+1.VHDL is a typed language and it is very difficult to understand.
 2.verilog is similar to c programing, c is a procedural/sequential  and verilog is concurrent programming language.
 3.Test bench is used to generate the stimuli 
 4.for every design we will write in IP and VIP 
