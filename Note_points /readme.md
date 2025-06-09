@@ -726,6 +726,7 @@ Order of exegution
 12.$readmemb----> ("file ',memory_identifier ..)read the memory in the binary 
        format
 REFET PPT
+======$display prints the value in the consol but $fdisplay prints in the file 
 
 
 
