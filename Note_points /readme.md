@@ -150,6 +150,7 @@ OPERATERS
 11.Equality operator equality , inequality ,case equality ,case inequality (case refers to 3 symbols)
 12.Bitwise operand returns the size of largest operand
 13.diffrence between the & and && &(bit wise means bitwise operation returs the largest bit of the operands ) &&(logical operands first decides if it is zero or non zero then it will give only one bit output ) Reduction operand also written only one bit .
+14. ------> if we have a/b result will be given accordingly by the numerator 
 
 STRUCTURAL MODELLING STYLE 
 How to delcare the parameter module #(parameter =4) (a,b,sum,cout)
