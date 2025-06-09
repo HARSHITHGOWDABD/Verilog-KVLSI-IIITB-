@@ -53,7 +53,7 @@
 
 ARRAYS 
 40. Used to store same type of data 
-41. In vectors the data will be stored in the form of row 
+41. In vectors the data will be stored in the form of row  (by default it will be wire)
 42. In arrays size is defined after the array name 
 43. In array each row of size 32 bit and it can be of reg ,integer, string (arrays forms column )
 -----> vector should always be of reg type
@@ -142,7 +142,8 @@ OPERATERS
 3.In tb there are many 
 4.Logic operator
 5.Shift operator( op1 should to unsigned in logical shift ans signed in arithmetic shift )
-6.Concatination opeartion
+6.Concatination opeartion just combine the two operands .
+-----> a/b the resultant sign will be decided by the numerator only
 7. In arithmetic opearation a/b if b is zero the result will be x
 8.Ternary operator is called ternary because it has three operands condition , true , false 
 9.Reduction operator writtens only one value 
@@ -217,6 +218,13 @@ DIFFRECNE BETWEEN THE INITIAL AND ALWAYS BLOCK
    Hint : ineed to make initial block as continious
 
    CLOCK GENERATION
+
+ WAYS TO GENERATE THE CLOCK 
+ 1.always with sencitivity 
+ 2.while (1)
+ 3.for without the condition 
+ 4.exor operation
+ 5. forever
    1.If we remove the sencitivity list this always block becomes infinate loop
    2. always  #1 clk =~clk 50% duty cycle with the time period of 2
    3. real keyword is used in the defining the frequency
@@ -225,7 +233,7 @@ DIFFRECNE BETWEEN THE INITIAL AND ALWAYS BLOCK
    1.Funtion and task are subroutine which makes code more readable 
    2.Function is used in DUT , Task is used testbench
    3.Function can be synthesizable , Task cannot be synthesizable
-   4.Function reurns only one value , Task doesnot return any value
+   4.Function reurns only one value , Task does not return any value
    5.Function and task are the procedural statements , when ever we want to include multiple value we can you begin and end are used
   ----> STATIC : when we write a module and initilize the memory will be created it is called as static
    6.And by default the module is static in nature shars the memory
@@ -262,7 +270,7 @@ DIFFRECNE BETWEEN THE INITIAL AND ALWAYS BLOCK
    17. -----inputs are always be  a wire in function , output can be reg or wire 
 
   -----> POINTS 
-  1.functction is a procedural block 
+1.functction is a procedural block 
 2.It synthesizable 
 3.all delay and timing constrainds are not be use 
 4.It will accepts multiple inputs and written only one output 
@@ -276,7 +284,7 @@ DIFFRECNE BETWEEN THE INITIAL AND ALWAYS BLOCK
 ### Points to be remember while writing the code 
 1.It fallows the behavioral type of modelling 
 2.inputs must be wire and output must be of wire type 
-3.Inside the finction dont mention the output arguments 
+3.Inside the function dont mention the output arguments 
 4.While calling the function use the variable declare in the module 
 
 TASK 
@@ -626,7 +634,7 @@ DISABLING THE BLOCK
 --> By providing the label to that block 
         begin : name 
 
-        disable name ]
+   disable :name 
  TIMING CHECK TASK 
  1.Veriog has some timing construct to perform common timing checks
  2.help in setup and hold voilation identification 
@@ -691,6 +699,35 @@ DISABLING THE BLOCK
 7.multiplication will be done only with time unit and precission unit just matching
 8.Precision will helps in convrting the fraction value into integer value
 9.refer ppt 
+
+Order of exegution 
+  a) fource 
+  b) assign 
+  c) continous/procedural 
+
+
+# VCD FILE SYSTEM
+
+1.It is called file handling 
+2.Value change dump file 
+3.It is added in 2001
+4.It is a feature  the external file can be called in the test 
+5.Majorly we have five operation a)openfile 
+                                 b)save file
+                                 c)read file 
+                                 d)loding the value 
+                                 e)close 
+6.$fopen(file_name)
+7.$close(file_name)
+8.$display(arguments)
+9.$write(arguments)
+10.$fstrobe(arguments)
+11.$fmonitor(arguments)
+12.$readmemb----> ("file ',memory_identifier ..)read the memory in the binary 
+       format
+REFET PPT
+
+
 
 
 
