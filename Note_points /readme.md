@@ -729,6 +729,12 @@ REFET PPT
 ======$display prints the value in the consol but $fdisplay prints in the file 
 
 
+## Full Case
+A full case means that all possible values of the case expression are explicitly covered by the case items, so no default case is needed.
+## Parallel Case 
+A parallel case means that all case items are mutually exclusive - only one case item can be true at any given time, and there's no overlap between conditions.
+
+
 
 
 
