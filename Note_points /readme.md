@@ -735,7 +735,11 @@ A full case means that all possible values of the case expression are explicitly
 A parallel case means that all case items are mutually exclusive - only one case item can be true at any given time, and there's no overlap between conditions.
 
 
-
+DEBUGGING 
+1. module with no delay and blocking will exegute only once
+2. module with no delay and non blocking will exegute infinate loop
+3. module with blocking and delaly with  exegute will exegute once
+4. module with non blocking with delay exegute only once 
 
 
 
