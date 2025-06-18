@@ -1,8 +1,8 @@
 # VHDL vs VERILOG 
 > * VHDL is a typed language and it is very difficult to understand.
 > * verilog is similar to c programing, c is a procedural/sequential  and verilog is concurrent programming language.
-> * Test bench is used to generate the stimuli 
-> *for every design we will write in IP and VIP 
+> * Test bench is used to generate the stimuli. 
+> *for every design we will write in IP and VIP .
 5.It is used for simulation and synthesis 
 6.we can write the code without fabrication technology
 7.Introduced by Gorden Bell and Alen Newell
