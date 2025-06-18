@@ -9,26 +9,26 @@
 > * Design flow diagram 
 > * First implimentd by prabugoyal , phil moorby by gatway automation later become cadence -1995
 > * In dut the first step is module and declaration of input and output ports
->  eloberate the design by using diffrent modelling style
-12.In test bech the module is without ports and input as reg and out as wire (behavioral modelling)
-13.Instanciate the dut and then stimuky geneation , capture and then publish the result 
-14.It is case sencitive and extencition is .v
-15.gate , structural , dataflow (rtl), behavioral , switch level of modelling
-16.comments (//) for multiple (/*),
-17.Rules of Identifier ,all keywords are in lower case,
-18.negative number is represented by 2's compliment form only
-19.default number is decimal and size is 32 bit .
-20.variable name =size'base value 
-21.blank space is filled by only 0,x,z.
-22.0x is an hexadecimal format .
-23.all the datatype in verilog has 4 states except real.
-24. ? is an alternative symbol for z in verilog,but in some of the condition it is dontcare .
-25.x and z are case insencitive 
-26. net type is used to connect multiple data default size is 1 and value is z.
-27. In net type signal must be driven continiously , suitable for combinational circuit 
-28. In vetror representation the size must be mentiond before variable name 
- 
- ---->DIFFRENCE BETWEEN THE WIRE AND REG 
+> * eloberate the design by using diffrent modelling style
+> * In test bech the module is without ports and input as reg and out as wire (behavioral modelling)
+> * Instanciate the dut and then stimuky geneation , capture and then publish the result 
+> * It is case sencitive and extencition is .v
+> * gate , structural , dataflow (rtl), behavioral , switch level of modelling
+> * comments (//) for multiple (/*),
+> * Rules of Identifier ,all keywords are in lower case,
+> * negative number is represented by 2's compliment form only
+> * default number is decimal and size is 32 bit .
+> * variable name =size'base value 
+> * blank space is filled by only 0,x,z.
+> * 0x is an hexadecimal format .
+> * all the datatype in verilog has 4 states except real.
+> *  ? is an alternative symbol for z in verilog,but in some of the condition it is dontcare .
+> * x and z are case insencitive 
+> * net type is used to connect multiple data default size is 1 and value is z.
+> * In net type signal must be driven continiously , suitable for combinational circuit 
+ > * In vetror representation the size must be mentiond before variable name 
+--------------------------------------------------------------------------------------------------------------------------------------- 
+ # DIFFRENCE BETWEEN THE WIRE AND REG 
  1.Default value is z and reg is X
  2.wire needs continious driving
  3.reg is used to hold the value wire will simply supply
