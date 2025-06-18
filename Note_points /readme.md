@@ -3,12 +3,12 @@
 > * verilog is similar to c programing, c is a procedural/sequential  and verilog is concurrent programming language.
 > * Test bench is used to generate the stimuli. 
 > * for every design we will write in IP and VIP .
-5.It is used for simulation and synthesis 
-6.we can write the code without fabrication technology
-7.Introduced by Gorden Bell and Alen Newell
-8.Design flow diagram 
-9.First implimentd by prabugoyal , phil moorby by gatway automation later become cadence -1995
-10.In dut the first step is module and declaration of input and output ports
+> * It is used for simulation and synthesis 
+> * we can write the code without fabrication technology
+> * Introduced by Gorden Bell and Alen Newell
+> * Design flow diagram 
+> * First implimentd by prabugoyal , phil moorby by gatway automation later become cadence -1995
+1> * In dut the first step is module and declaration of input and output ports
 11. eloberate the design by using diffrent modelling style
 12.In test bech the module is without ports and input as reg and out as wire (behavioral modelling)
 13.Instanciate the dut and then stimuky geneation , capture and then publish the result 
