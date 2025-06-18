@@ -1,4 +1,4 @@
-# VHDL vs VERILOG 
+# INTRODUCTION TO VHDL vs VERILOG 
 > * VHDL is a typed language and it is very difficult to understand.
 > * verilog is similar to c programing, c is a procedural/sequential  and verilog is concurrent programming language.
 > * Test bench is used to generate the stimuli. 
@@ -8,8 +8,8 @@
 > * Introduced by Gorden Bell and Alen Newell
 > * Design flow diagram 
 > * First implimentd by prabugoyal , phil moorby by gatway automation later become cadence -1995
-1> * In dut the first step is module and declaration of input and output ports
-11. eloberate the design by using diffrent modelling style
+> * In dut the first step is module and declaration of input and output ports
+>  eloberate the design by using diffrent modelling style
 12.In test bech the module is without ports and input as reg and out as wire (behavioral modelling)
 13.Instanciate the dut and then stimuky geneation , capture and then publish the result 
 14.It is case sencitive and extencition is .v
