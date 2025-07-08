@@ -1,7 +1,7 @@
 ---------------------Verilog Debugging Questions By Shashi Kant----------------------------
 
 What is the output of these program. 
-
+```
 Q1. module test;
 
 	reg [7:0] a;
@@ -11,8 +11,8 @@ Q1. module test;
 		$display("A= %0d", a);
 	end
    endmodule
-
-
+```
+```
 Q2. module test;
 	reg[2:0] i;
 
@@ -21,8 +21,8 @@ Q2. module test;
 	$display("I= %0d", i);
 	end
 endmodule
-
-
+```
+```
 Q3. module test;
 	integer i,j,count=0;
 
@@ -33,7 +33,8 @@ Q3. module test;
 	$display("Count=%0d", count);
 	end
     endmodule
-
+```
+```
 Q4. module test;
 
 	initial begin
