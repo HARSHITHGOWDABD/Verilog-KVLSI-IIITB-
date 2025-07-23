@@ -29,129 +29,129 @@
  > * In vetror representation the size must be mentiond before variable name 
 --------------------------------------------------------------------------------------------------------------------------------------- 
  # DIFFRENCE BETWEEN THE WIRE AND REG 
- 1.Default value is z and reg is X
- 2.wire needs continious driving
- 3.reg is used to hold the value wire will simply supply
- 4.reg will be written inside the procedural blocks 
- 5.wire and reg by default they are unsigned .(integer is signed )
- 6.If we want to make it signed then signed keyword can be used befor the size  of 32 bit 
- 7.multidriver condition is supported by wire 
+ > * Default value is z and reg is X
+ > * wire needs continious driving
+ > * reg is used to hold the value wire will simply supply
+ > * reg will be written inside the procedural blocks 
+ > * wire and reg by default they are unsigned .(integer is signed )
+ > * If we want to make it signed then signed keyword can be used befor the size  of 32 bit 
+ > * multidriver condition is supported by wire 
 
 
 ---> ALWAYS AND INITIAL ARE THE PROCEDURAL BLOCKS  , FUNCTION AND  TASK ALSO 
 
-30. Order must be same always from higher to lower or lower to higher in vector
-31. integer is also a type of reg datatype
-32. it is 32 bit and signed and default value is x . Equal to reg signed [31:0]a;
-33. ---> WE cannot mention the size to an integer.Because by default the size is fixed
-34. ---->all inputs are wire and output are of reg in dut
-35. Real is a type of register data type used to store real values
-36. ---> default value is 0 and
-37. time and realtime are 64 bit datatype used to show the simulation results.
-38. time will give the time in integer where as realtime will provide the fraction values also
-39. $time is a system function used to show current simulation time.
+> * Order must be same always from higher to lower or lower to higher in vector
+> * integer is also a type of reg datatype
+> * it is 32 bit and signed and default value is x . Equal to reg signed [31:0]a;
+> * ---> WE cannot mention the size to an integer.Because by default the size is fixed
+> * ---->all inputs are wire and output are of reg in dut
+> *  Real is a type of register data type used to store real values
+> * ---> default value is 0 and
+> * time and realtime are 64 bit datatype used to show the simulation results.
+> * time will give the time in integer where as realtime will provide the fraction values also
+> * $time is a system function used to show current simulation time.
 
-ARRAYS 
-40. Used to store same type of data 
-41. In vectors the data will be stored in the form of row  (by default it will be wire)
-42. In arrays size is defined after the array name 
-43. In array each row of size 32 bit and it can be of reg ,integer, string (arrays forms column )
------> vector should always be of reg type
-int a[10] --> compact declaration 
-int a[1:0] --->verbose declaration 
-45. array accesing declaration is same as array declaration with compact
+# ARRAYS 
+> * Used to store same type of data 
+> * In vectors the data will be stored in the form of row  (by default it will be wire)
+> * In arrays size is defined after the array name 
+> * In array each row of size 32 bit and it can be of reg ,integer, string (arrays forms column )
+ > * -----> vector should always be of reg type
+> * int a[10] --> compact declaration 
+> * int a[1:0] --->verbose declaration 
+> * 45. array accesing declaration is same as array declaration with compact
 
-STRINGS
-46.There is no ready made string datatype in verilog 
-47.String is a arrray of character and each charactes need 8 bit to represent it 
-48.We need to use the reg datatype to for the string 
-49.In verilog we need to declare the memory first 
-50.Syntax is similar to the vector 
-51.If we decalare the size is more than the required then the blank space will be created at msb side 
-52.If the size is less than the required then lsb bits are given higher preiority msb bits are truncated 
+# STRINGS
+> * There is no ready made string datatype in verilog
+> * String is a arrray of character and each charactes need 8 bit to represent it 
+> * We need to use the reg datatype to for the string 
+> * In verilog we need to declare the memory first 
+> * Syntax is similar to the vector 
+> * If we decalare the size is more than the required then the blank space will be created at msb side 
+> * If the size is less than the required then lsb bits are given higher preiority msb bits are truncated 
 
-FUNDAMENTAL BLOCK OF VERILOG 
-53.Module is a basic building block of verilog 
-54.By default the datatype of the input is wire always 
-55.For output it can be reg or wire 
-56.while writing the port if they are of same size no need to declare seperately 
-57.vector representation for mux and other type of representation
+# FUNDAMENTAL BLOCK OF VERILOG 
+> * Module is a basic building block of verilog 
+> * By default the datatype of the input is wire always 
+> * For output it can be reg or wire 
+> * while writing the port if they are of same size no need to declare seperately 
+> * vector representation for mux and other type of representation
 
-58.Input always be a wire type , output is reg or wire
+> *Input always be a wire type , output is reg or wire
 
-Parameter 
-1.It is used to define the parameter in the code 
-2.Syntax Parameter variable_name = value
-3.Parameter can be chaned by using the defparam used in testbench (it will overite the value )
-4.It can be binary , real, integer or string 
+# Parameter 
+> * It is used to define the parameter in the code
+> * Syntax Parameter variable_name = value
+> * Parameter can be chaned by using the defparam used in testbench (it will overite the value )
+> * It can be binary , real, integer or string 
 
-Level of abstraction in verilog 
-1. Structural (by using gates ) we will use the primitives here
-2. dataflow (assign )
-3. structural (instatiation )
-4. behavioral (higher level of constracts )
+# Level of abstraction in verilog 
+> * Structural (by using gates ) we will use the primitives here
+> * dataflow (assign )
+> * structural (instatiation )
+> * behavioral (higher level of constracts )
 
-Structural modelling 
-1. Majorly there are three types of primitives in a)logic b)inverter/buff c)tristate inv/buff
-2. Logic primitive and ,or ,xor,xnor,nand , nor (they have only one input and multiple output
-3. syntax will be logic(output , in1,in2,in3)
-4. In  inveter/ buffer --1)Buf and 2) not here [it as one input and multiple output]
-5. the syntax is inv(op1,op2,op3,in)
-6. Tristate inveter,buffer --bufif0  -- active high control buffer 
-7. .                      --bufif1  -- active low control buffer 
-8. .                      --notif0  -- active low control inverter 
-9. .                      --notif1  -- active high control inverter
-10.  syntax is primitive name instance name (outputs, inputs, control)
+# Structural modelling 
+> * Majorly there are three types of primitives in a)logic b)inverter/buff c)tristate inv/buff
+> * Logic primitive and ,or ,xor,xnor,nand , nor (they have only one input and multiple output
+> * syntax will be logic(output , in1,in2,in3)
+> * In  inveter/ buffer --1)Buf and 2) not here [it as one input and multiple output]
+> * the syntax is inv(op1,op2,op3,in)
+> * Tristate inveter,buffer --bufif0  -- active high control buffer 
+> *  .                    --bufif1  -- active low control buffer 
+> * .                      --notif0  -- active low control inverter 
+> * .                      --notif1  -- active high control inverter
+> * syntax is primitive name instance name (outputs, inputs, control)
 
-----In gate level and dataflow  , structural the output is of the wire type only
-----In Behaviorl output is of the reg type 
-59.# is used to provide the delay 
-30.Steps in the test bench 
- a)write a module without port 
- b)input as reg and output as wire 
- c)Dut instantiation (Port mapping may be position or named )
- d)stimuly generation 
- e)Capture the monitor input and output within procedural block
- f)For waveform with in the initial block $dumpfile ("dump.vcd") and $dumpvars("0,a,b,c) zero is the level of hirachy 
+> * ----In gate level and dataflow  , structural the output is of the wire type only
+> * ----In Behaviorl output is of the reg type 
+> * is used to provide the delay 
+> * Steps in the test bench 
+> * a)write a module without port 
+> * b)input as reg and output as wire 
+> * c)Dut instantiation (Port mapping may be position or named )
+> * d)stimuly generation 
+> * e)Capture the monitor input and output within procedural block
+> * f)For waveform with in the initial block $dumpfile ("dump.vcd") and $dumpvars("0,a,b,c) zero is the level of hirachy 
 
-1) 2:1 mux using  structural modelling
-2) 2:4 decoder
-3) 4:2 encoder
-4) 3 bit parity generator
+> * 1) 2:1 mux using  structural modelling
+> * 2) 2:4 decoder
+> * 3) 4:2 encoder
+> * 4) 3 bit parity generator
 
-Dataflow modelling 
-1.Impliment by using some operators
-2.Assign key word will be used 
-----in dataflow the target must be of wire (net)type 
- 3.How asign works initially evaluation of rhs will be done and then updation to lhs will be done 
-4.RHS could be of net or reg or function 
-5.if single wire is assigned with two diffrent operation is called multidriver condition
-6.It is only when the target is of wire type (it will produce x)
-7.If there is delay there is no problem
+# Dataflow modelling 
+> * Impliment by using some operators
+> * Assign key word will be used 
+> * ----in dataflow the target must be of wire (net)type 
+> * How asign works initially evaluation of rhs will be done and then updation to lhs will be done 
+> * RHS could be of net or reg or function 
+> * if single wire is assigned with two diffrent operation is called multidriver condition
+> * It is only when the target is of wire type (it will produce x)
+> * If there is delay there is no problem
 
-codes 
-a)3 bit binary to gray code converter 
-b)prime number detectator 
-c)3 bit pallendrode detector 
-d)BCD to excess 3 code converter 
-----> in behavioral asignment the target must (LHS) be of the reg type only 
+# codes 
+> * 3 bit binary to gray code converter
+> * prime number detectator 
+> * bit pallendrode detector 
+> * BCD to excess 3 code converter 
+> * ----> in behavioral asignment the target must (LHS) be of the reg type only 
 
-OPERATERS 
-1.Arithmetic operator is a binary operator 
-2.If any of the opearatiod is real or x or z it will be x and real
-3.In tb there are many 
-4.Logic operator
-5.Shift operator( op1 should to unsigned in logical shift ans signed in arithmetic shift )
-6.Concatination opeartion just combine the two operands .
------> a/b the resultant sign will be decided by the numerator only
-7. In arithmetic opearation a/b if b is zero the result will be x
-8.Ternary operator is called ternary because it has three operands condition , true , false 
-9.Reduction operator writtens only one value 
-10.Logical equal and case equal is very important == and ===
-11.Equality operator equality , inequality ,case equality ,case inequality (case refers to 3 symbols)
-12.Bitwise operand returns the size of largest operand
-13.diffrence between the & and && &(bit wise means bitwise operation returs the largest bit of the operands ) &&(logical operands first decides if it is zero or non zero then it will give only one bit output ) Reduction operand also written only one bit .
-14. ------> if we have a/b result will be given accordingly by the numerator 
+# OPERATERS 
+> * Arithmetic operator is a binary operator 
+> * If any of the opearatiod is real or x or z it will be x and real
+> * In tb there are many 
+> * Logic operator
+> * Shift operator( op1 should to unsigned in logical shift ans signed in arithmetic shift )
+> * Concatination opeartion just combine the two operands .
+> * -----> a/b the resultant sign will be decided by the numerator only
+> * In arithmetic opearation a/b if b is zero the result will be x
+> * Ternary operator is called ternary because it has three operands condition , true , false 
+> * Reduction operator writtens only one value 
+> * Logical equal and case equal is very important == and ===
+> * Equality operator equality , inequality ,case equality ,case inequality (case refers to 3 symbols)
+> * Bitwise operand returns the size of largest operand
+> *diffrence between the & and && &(bit wise means bitwise operation returs the largest bit of the operands ) &&(logical operands first decides if it is zero or non zero then it will give only one bit output ) Reduction operand also written only one bit .
+> * 14. ------> if we have a/b result will be given accordingly by the numerator 
 
 STRUCTURAL MODELLING STYLE 
 How to delcare the parameter module #(parameter =4) (a,b,sum,cout)
