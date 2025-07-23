@@ -31,7 +31,7 @@
 
 --------------------------------------------------------------------------------------------------------------------------------------- 
  # DIFFRENCE BETWEEN THE WIRE AND REG 
- ```
+
  > * Default value is z and reg is X
  > * wire needs continious driving
  > * reg is used to hold the value wire will simply supply
@@ -53,9 +53,9 @@
 > * time and realtime are 64 bit datatype used to show the simulation results.
 > * time will give the time in integer where as realtime will provide the fraction values also
 > * $time is a system function used to show current simulation time.
-```
+
 # ARRAYS
-```
+
 > * Used to store same type of data 
 > * In vectors the data will be stored in the form of row  (by default it will be wire)
 > * In arrays size is defined after the array name 
@@ -64,9 +64,9 @@
 > * int a[10] --> compact declaration 
 > * int a[1:0] --->verbose declaration 
 > * 45. array accesing declaration is same as array declaration with compact
-```
+
 # STRINGS
-```
+
 > * There is no ready made string datatype in verilog
 > * String is a arrray of character and each charactes need 8 bit to represent it 
 > * We need to use the reg datatype to for the string 
@@ -74,9 +74,9 @@
 > * Syntax is similar to the vector 
 > * If we decalare the size is more than the required then the blank space will be created at msb side 
 > * If the size is less than the required then lsb bits are given higher preiority msb bits are truncated 
-```
+
 # FUNDAMENTAL BLOCK OF VERILOG 
-```
+
 > * Module is a basic building block of verilog 
 > * By default the datatype of the input is wire always 
 > * For output it can be reg or wire 
@@ -84,25 +84,25 @@
 > * vector representation for mux and other type of representation
 
 > *Input always be a wire type , output is reg or wire
-```
+
 # Parameter 
-```
+
 > * It is used to define the parameter in the code
 > * Syntax Parameter variable_name = value
 > * Parameter can be chaned by using the defparam used in testbench (it will overite the value )
 > * It can be binary , real, integer or string
-```
+
 
 # Level of abstraction in verilog 
-```
+
 > * Structural (by using gates ) we will use the primitives here
 > * dataflow (assign )
 > * structural (instatiation )
 > * behavioral (higher level of constracts )
- ```
+
 
 # Structural modelling 
-```
+
 > * Majorly there are three types of primitives in a)logic b)inverter/buff c)tristate inv/buff
 > * Logic primitive and ,or ,xor,xnor,nand , nor (they have only one input and multiple output
 > * syntax will be logic(output , in1,in2,in3)
@@ -129,10 +129,10 @@
 > * 2) 2:4 decoder
 > * 3) 4:2 encoder
 > * 4) 3 bit parity generator
-```
+
 
 # Dataflow modelling 
-```
+
 > * Impliment by using some operators
 > * Assign key word will be used 
 > * ----in dataflow the target must be of wire (net)type 
@@ -141,17 +141,17 @@
 > * if single wire is assigned with two diffrent operation is called multidriver condition
 > * It is only when the target is of wire type (it will produce x)
 > * If there is delay there is no problem
-```
+
 # codes 
-```
+
 > * 3 bit binary to gray code converter
 > * prime number detectator 
 > * bit pallendrode detector 
 > * BCD to excess 3 code converter 
 > * ----> in behavioral asignment the target must (LHS) be of the reg type only 
-```
+
 # OPERATERS 
-```
+
 > * Arithmetic operator is a binary operator 
 > * If any of the opearatiod is real or x or z it will be x and real
 > * In tb there are many 
@@ -167,16 +167,16 @@
 > * Bitwise operand returns the size of largest operand
 > *diffrence between the & and && &(bit wise means bitwise operation returs the largest bit of the operands ) &&(logical operands first decides if it is zero or non zero then it will give only one bit output ) Reduction operand also written only one bit .
 > * 14. ------> if we have a/b result will be given accordingly by the numerator 
-```
+
 # STRUCTURAL MODELLING STYLE 
-```
+
 How to delcare the parameter module #(parameter =4) (a,b,sum,cout)
 
 > *  46. Initial block is non synthesizable always used in testbench , always block is synthesizable and execute in the looping fashion
 > *  47. The code inside the always and sequential in nature
 > *  48. Sencitivity list is the list of variables means inputs and @ (holds the simulation till the changes occurs inside the sencitivity
       list )
-```
+
     # BEHAVIORAL MODELLING
 ```
 > *  49.Behavioral can be used  for cobinational and sequential circuit
