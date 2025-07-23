@@ -1,5 +1,5 @@
 # INTRODUCTION TO VHDL vs VERILOG 
-```
+
 > * VHDL is a typed language and it is very difficult to understand.
 > * verilog is similar to c programing, c is a procedural/sequential  and verilog is concurrent programming language.
 > * Test bench is used to generate the stimuli. 
@@ -28,7 +28,7 @@
 > * net type is used to connect multiple data default size is 1 and value is z.
 > * In net type signal must be driven continiously , suitable for combinational circuit 
  > * In vetror representation the size must be mentiond before variable name
- ```
+
 --------------------------------------------------------------------------------------------------------------------------------------- 
  # DIFFRENCE BETWEEN THE WIRE AND REG 
  ```
