@@ -449,7 +449,8 @@ d) $strobe                -----> postponed region ----has new line char -- print
 
 
 # EXAMPLE FOR BLOCKING RACE CONDITION 
-``` a=1
+```
+   a=1
    b=0
 
    initial brgin a=b
@@ -484,10 +485,9 @@ d) $strobe                -----> postponed region ----has new line char -- print
   3. in if else the else part will exegute  when it is x
   4. But in ternary each bit will be compared and if they are same it will give 1 if it is diffrent it will give x
 ```
-
 # MULTYWAY BRANCHING 
 ```
- 1. When ever we want to check the multiple condition case statemnet will be useful and check will be done in the order what they have        written
+1. When ever we want to check the multiple condition case statemnet will be useful and check will be done in the order what they have        written
 2. Default statemts will be always exegute at the last
 3. ---->In the case statement whenever we are not writing all the conditions and the default statemts under this condition it will call the previous value or latched value (It will give previous latched value)
 4. nesting of case statement is allowed
