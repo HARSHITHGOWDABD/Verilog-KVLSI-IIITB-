@@ -177,7 +177,7 @@ How to delcare the parameter module #(parameter =4) (a,b,sum,cout)
 > *  48. Sencitivity list is the list of variables means inputs and @ (holds the simulation till the changes occurs inside the sencitivity
       list )
 
-    # BEHAVIORAL MODELLING
+ # BEHAVIORAL MODELLING
 
 > *  49.Behavioral can be used  for cobinational and sequential circuit
 > *  50.In combinatioal circuit include all the inputs in the sencitivity list and use the blocking statements
