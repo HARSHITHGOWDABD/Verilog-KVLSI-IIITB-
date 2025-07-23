@@ -178,7 +178,7 @@ How to delcare the parameter module #(parameter =4) (a,b,sum,cout)
       list )
 
     # BEHAVIORAL MODELLING
-```
+
 > *  49.Behavioral can be used  for cobinational and sequential circuit
 > *  50.In combinatioal circuit include all the inputs in the sencitivity list and use the blocking statements
 > *  51.Inputs must be of wire and output must be reg
@@ -224,9 +224,9 @@ How to delcare the parameter module #(parameter =4) (a,b,sum,cout)
 > *  89. Always block executes at multiple times that depends on the sencitivity list
 > *  90. When we dont write the sencitivity list the always block will exwcute for infinate time
 > *  91. In the same code we have both always and initial in this case initial will execute first
-```
+
 # DIFFRECNE BETWEEN THE INITIAL AND ALWAYS BLOCK
-```
+
 > *  1. initial non synthesizable , always may be synthezible(provoided codeing guidelines are followed)
 > *  2. initial runs one time , always runs frequently depending upon the sensitivity list 
 > *  3. Multiple times we can use and always execute in 0 simulation time
@@ -235,11 +235,11 @@ How to delcare the parameter module #(parameter =4) (a,b,sum,cout)
 
    # write a verilog code the initial block works as a always block and always as a initial block
   > *  Hint : ineed to make initial block as continious
-```
+
   #  CLOCK GENERATION
 
 # WAYS TO GENERATE THE CLOCK 
-```
+
 > *  1.always with sencitivity 
 > *  2.while (1)
 > *  3.for without the condition 
@@ -247,11 +247,10 @@ How to delcare the parameter module #(parameter =4) (a,b,sum,cout)
 > *  5. forever
  > *   1.If we remove the sencitivity list this always block becomes infinate loop
 > *    2. always  #1 clk =~clk 50% duty cycle with the time period of 2
-> *    3. real keyword is used in the defining the frequency
-```
+
 
  #  FUNCTIONS  AND TASK IN VERILOG
- ```
+
  > *  1.Funtion and task are subroutine which makes code more readable 
 > *    2.Function is used in DUT , Task is used testbench
 > *    3.Function can be synthesizable , Task cannot be synthesizable
@@ -271,9 +270,9 @@ How to delcare the parameter module #(parameter =4) (a,b,sum,cout)
 > *    14. Function can accept any number of inputs and returns only one output
 > *    15. Task doesnot return any value  but it will calculate multiple values
 > *    16. Task may contaion delay and other time consuming elements, where function doesnot 
-```
+
 #   FUNCTION
-```
+
 > *    1. Function start with the function keyword and ends with endfunction
 > *    2. Function always returns the single value
 > *    3. They cannot have input and output ports  but task has
@@ -291,10 +290,10 @@ How to delcare the parameter module #(parameter =4) (a,b,sum,cout)
 > *    15. We cannot use the non blocking statements in the function
  > *   16. Function and task have an access to the outside the scope (should be written inside the module )
  > *   17. -----inputs are always be  a wire in function , output can be reg or wire
-```
+
 
 #  -----> POINTS 
-```
+
 > *  1.functction is a procedural block 
 > *  2.It synthesizable 
 > *  3.all delay and timing constrainds are not be use 
@@ -305,17 +304,17 @@ How to delcare the parameter module #(parameter =4) (a,b,sum,cout)
 > *  8.Function have an acces to the global varible 
 > *  9.Function use only blocking statement and eegute in the activeregion 
 > *  10. Function must have one input argument
-```
+
 ### Points to be remember while writing the code 
-```
+
 > *  1.It fallows the behavioral type of modelling 
 > *  2.inputs must be wire and output must be of wire type 
 > *  3.Inside the function dont mention the output arguments 
 > *  4.While calling the function use the variable declare in the module
-  ```
+
 
 # TASK
-```
+
 > *  1. It starts with the keyword task and ends with endtask
 > *  2. Non synthesizable
 > *  3. In function only input ports are are declared and output through the function name
@@ -333,10 +332,10 @@ How to delcare the parameter module #(parameter =4) (a,b,sum,cout)
 > * 13.Both blocking and non blocking are allowed in task 
 > * 14.Based on the useage the task can be executed in  the diffrent region 
 > * 15.Function and task have an acceibility to the signals written inside the module
-```
+
 
 # Function and task diffrence 
-```
+
 > * 1. synthesizable non 
 > * 2. Requires atlest one input argiment , non required 
 > * 3. exegutes in the active regin , depends 
@@ -347,15 +346,15 @@ How to delcare the parameter module #(parameter =4) (a,b,sum,cout)
 > * 8. Timing constarins are not allowed , here it is allowed 
 > * 9. Order of accesing shold be same as declaed in the task
 > * 10. function exegutes at zero simulation time
-```
+
 
  #  AUTOMATIC
- ```
+
 > * 1.Automatic function will create the memory for the each invocation
 > * 2.This concept is used in reccursive function and task
 > * 3.Function calling itself best example is factorial of a number
 > * 4.fact(n)  ====n*fact(n-1)
-```
+
 # SYNTAX
 ```
  function automatic returntype function_name( inputs --)
