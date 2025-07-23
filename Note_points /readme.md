@@ -475,7 +475,7 @@ d) $strobe                -----> postponed region ----has new line char -- print
    10.   if
    11.   IMPORANT FOR UNDERSTANDING  we can write the mnultiple if , if  condition then it will check all the if conditions
    12.   But if we mention any else condition if , if condition is true it will not check the else condition
-    ```
+   ```
 
 
  #  DIFFRENCE BETWEEN THE TERNARY OPRATATOR AND IF ELSE 
